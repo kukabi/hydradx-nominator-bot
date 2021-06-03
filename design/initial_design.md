@@ -16,19 +16,29 @@ enter your HDX address (get it and save)
 
 /remove remove an address 
 
-/nominatorinfo -> choose your nominator from the list ->
+/nominatorinfo -> choose your nominator from the list - >
+
      nominator info:
+     
      - address
+     
      - stake / nominated stake (here could be a link to active nominations)
+     
      - rewards (past rewards sum and unpaid rewards)
+     
      {- rewards charts are not necessary now} 
 
 /validators -> choose your nominator ->
+	
 	you validators list (here is a UI issue: list could be big)
+	
 	- list:
+	
 	| name or short addr of valdtr | active/not active | nominated stake | pending rewards
+	
 	| .............................| active/not active | nominated stake | pending rewards
-	  pending rewards could contain a link to the payout page
+	
+	pending rewards could contain a link to the payout page
 
 {/news -> It could be the great opportunity for a bot to be more useful. For the start I could enter news manually}
 
