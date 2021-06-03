@@ -5,6 +5,7 @@ So, I suggest to create a bot with information interesting for Nominators.
 I marked optional functionality with {}
 
 enter your HDX address (get it and save)
+
 {/language - very questionable if we need it, maybe the bot is not complicated, do we need to translate it?}
 /about information about bot, devs, list of good validators
 /help list of commands
