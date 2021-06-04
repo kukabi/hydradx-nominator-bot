@@ -1,47 +1,74 @@
-Idea:
-Not very much validator can do in HydraDX now. Tokens are not transferable for now.
-Nominators are monitoring their stakes every hour and polkadot.js.org portal is not fast and comfortable enough.
+### Initial Ideas
+
+There's not very much a validator can do in HydraDX now. Tokens are not transferable for now.
+
+Nominators are monitoring their stakes every hour through [polkadot.js](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-01.snakenet.hydradx.io#), which is not fast nor very user-friendly.
+
 So, I suggest to create a bot with information interesting for Nominators.
-I marked optional functionality with {}
+I marked optional functionality with {}.
 
-enter your HDX address (get it and save)
+On chat startup: `enter your HDX address (get it and save)`
 
-{/language - very questionable if we need it, maybe the bot is not complicated, do we need to translate it?}
+{`/language` - very questionable if we need it, maybe the bot is not complicated, do we need to translate it?}
 
-/about information about bot, devs, list of good validators
+> **@kukabi:** I agree this is not a critical feature now. But it'd be good to be prepared for future i18n.
 
-/help list of commands
+`/about` information about bot, devs, list of good validators
 
-/add add an address to follow
+> **@kukabi:** I think we can separate the bot's `/about` from the network info. How about a `/network` command to get that sort of info? Or just have a `/validators` command to display select validators, and rename the same-named command below as I suggested in the comments for it?
 
-/remove remove an address 
+`/help` list of commands
 
-/nominatorinfo -> choose your nominator from the list - >
+> **@kukabi:** ✅
 
-     nominator info:
+`/add` add an address to follow
+
+> **@kukabi:** ✅
+
+`/remove` remove an address 
+
+> **@kukabi:** ✅
+
+`/nominatorinfo` -> choose your nominator from the list - >
+
+    nominator info:
      
-     - address
+    - address
      
-     - stake / nominated stake (here could be a link to active nominations)
-     
-     - rewards (past rewards sum and unpaid rewards)
-     
-     {- rewards charts are not necessary now} 
+    - stake / nominated stake (here could be a link to active nominations)
 
-/validators -> choose your nominator ->
+    - rewards (past rewards sum and unpaid rewards)
+    
+    {- rewards charts are not necessary now} 
+    
+> **@kukabi:** ✅
+
+`/validators` -> choose your nominator ->
 	
-	you validators list (here is a UI issue: list could be big)
-	
-	- list:
-	
-	| name or short addr of valdtr | active/not active | nominated stake | pending rewards
+    nominated validator list (here is a UI issue: list could be big)
+    
+    - list:
+    
+    | name or short addr of valdtr | active/not active | nominated stake | pending rewards
 	
 	| .............................| active/not active | nominated stake | pending rewards
 	
 	pending rewards could contain a link to the payout page
 
-{/news -> It could be the great opportunity for a bot to be more useful. For the start I could enter news manually}
+> **@kukabi:** I think `/nominations` might be a better name for this command.
+> 
+> Aggregate/summary info like `x validators, x active, x total pending` may be helpful here too, at the top or the bottom of the result. Not sure but maybe statistical data like `(total nominated stake of all nominated validators) / (total stake on the network)` may help too?
+>
+> I agree with you regarding the potential UI issue. I think Telegram supports tabular data through markdown - we should take a look at that and experiment with different formats. Pagination is also another pattern - but not sure how practical it can be on Telegram.
 
-{/tutorials “how to”: claim tokens, nominate,validate, request a tip and so on}
+{`/news` -> It could be the great opportunity for a bot to be more useful. For the start I could enter news manually}
 
-/feedback Enter your feedback here. What functionality would you like to see in this bot?
+> **@kukabi:** I agree. Very cool idea.
+
+{`/tutorials` “how to”: claim tokens, nominate,validate, request a tip and so on}
+
+> **@kukabi:** Good value.
+
+`/feedback` Enter your feedback here. What functionality would you like to see in this bot?
+
+> **@kukabi:** ✅
