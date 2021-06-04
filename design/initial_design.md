@@ -72,3 +72,15 @@ On chat startup: `enter your HDX address (get it and save)`
 `/feedback` Enter your feedback here. What functionality would you like to see in this bot?
 
 > **@kukabi:** ✅
+
+#### Notifications
+
+> **@kukabi:** Just adding some notifications off the top of my head, let's eloborate.
+
+- One of the nominated validators receives/loses a nomination.
+- A nominated validator gets in the active set.
+- A payout is made to one of the nominator accounts.
+- Pending payouts for any nominators at the end of every era.
+- A validator gets offline (doesn't send the `imonline` message).
+- A validator gets slashed.
+- ...
