@@ -1,4 +1,4 @@
-### Initial Ideas
+## Initial Ideas
 
 There's not very much a validator can do in HydraDX now. Tokens are not transferable for now.
 
@@ -73,7 +73,7 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > **@kukabi:** ✅
 
-#### Notifications
+### Notifications
 
 > **@kukabi:** Just adding some notifications off the top of my head, let's elaborate.
 
@@ -85,6 +85,6 @@ On chat startup: `enter your HDX address (get it and save)`
 - A validator gets slashed.
 - ...
 
-#### Validator Ranking
+### Validator Ranking
 
 > **@kukabi:** I don't know about the existing models of validator ranking, but I saw a few community contributions around this. Would help the `/validators` command to specify the ranking algorithm.
