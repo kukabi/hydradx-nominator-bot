@@ -75,7 +75,7 @@ On chat startup: `enter your HDX address (get it and save)`
 
 #### Notifications
 
-> **@kukabi:** Just adding some notifications off the top of my head, let's eloborate.
+> **@kukabi:** Just adding some notifications off the top of my head, let's elaborate.
 
 - One of the nominated validators receives/loses a nomination.
 - A nominated validator gets in the active set.
@@ -84,3 +84,7 @@ On chat startup: `enter your HDX address (get it and save)`
 - A validator gets offline (doesn't send the `imonline` message).
 - A validator gets slashed.
 - ...
+
+#### Validator Ranking
+
+> **@kukabi:** I don't know about the existing models of validator ranking, but I saw a few community contributions around this. Would help the `/validators` command to specify the ranking algorithm.
