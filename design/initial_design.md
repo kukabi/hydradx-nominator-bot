@@ -66,9 +66,10 @@ On chat startup: `enter your HDX address (get it and save)`
 > I agree with you regarding the potential UI issue. I think Telegram supports tabular data through markdown - we should take a look at that and experiment with different formats. Pagination is also another pattern - but not sure how practical it can be on Telegram.
 
 > **@osoiotoko:** great point: `/nominations` is much more clear: here we suggest an information about current nominations. 
-> And more - Summary (and notifications) is the MOST imoptant feature, because user wants to see the picture fast to be sure that everything is ok.
+> And more - Summary (and notifications) is the MOST important feature, because user wants to see the picture fast to be sure that everything is ok.
 > So we can start summary with `x validators, x active, x total pending` 
 > may be with additional stake info for more clear info:
+> 
 > `Total: n HDX nominated to x validators` 
 > `Active: n HDX nominated  to x active validators`
 > `Pending: x your validators are in next set`
