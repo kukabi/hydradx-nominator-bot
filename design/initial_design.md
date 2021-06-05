@@ -71,7 +71,9 @@ On chat startup: `enter your HDX address (get it and save)`
 > may be with additional stake info for more clear info:
 > 
 > `Total: n HDX nominated to x validators` 
+> 
 > `Active: n HDX nominated  to x active validators`
+> 
 > `Pending: x your validators are in next set`
 
 {`/news` -> It could be the great opportunity for a bot to be more useful. For the start I could enter news manually}
