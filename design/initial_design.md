@@ -13,9 +13,13 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > **@kukabi:** I agree this is not a critical feature now. But it'd be good to be prepared for future i18n.
 
+> **@osoiotoko:**✅
+
 `/about` information about bot, devs, list of good validators
 
 > **@kukabi:** I think we can separate the bot's `/about` from the network info. How about a `/network` command to get that sort of info? Or just have a `/validators` command to display select validators, and rename the same-named command below as I suggested in the comments for it?
+
+> **@osoiotoko:** "list of good validators" - is some advertizing here. Didn't mean to make big things here. 
 
 `/help` list of commands
 
@@ -61,6 +65,14 @@ On chat startup: `enter your HDX address (get it and save)`
 >
 > I agree with you regarding the potential UI issue. I think Telegram supports tabular data through markdown - we should take a look at that and experiment with different formats. Pagination is also another pattern - but not sure how practical it can be on Telegram.
 
+> **@osoiotoko:** great point: `/nominations` is much more clear: here we suggest an information about current nominations. 
+> And more - Summary (and notifications) is the MOST imoptant feature, because user wants to see the picture fast to be sure that everything is ok.
+> So we can start summary with `x validators, x active, x total pending` 
+> may be with additional stake info for more clear info:
+> `Total: n HDX nominated to x validators` 
+> `Active: n HDX nominated  to x active validators`
+> `Pending: x your validators are in next set`
+
 {`/news` -> It could be the great opportunity for a bot to be more useful. For the start I could enter news manually}
 
 > **@kukabi:** I agree. Very cool idea.
@@ -77,14 +89,28 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > **@kukabi:** Just adding some notifications off the top of my head, let's elaborate.
 
-- One of the nominated validators receives/loses a nomination.
-- A nominated validator gets in the active set.
+- One of the nominated validators receives/loses a nomination. > **@osoiotoko:** I am not sure this info is valuable
+- A nominated validator gets in the active set. 
 - A payout is made to one of the nominator accounts.
-- Pending payouts for any nominators at the end of every era.
+- Pending payouts for any nominators at the end of every era. > **@osoiotoko:** any nominators = this user nominators ?
 - A validator gets offline (doesn't send the `imonline` message).
 - A validator gets slashed.
 - ...
 
+> **@osoiotoko:** - ... big news
+
+> notifications is the coolest thing in this bot. Are we going to allow custom on/off? Seems like next version?
+
 ### Validator Ranking
 
 > **@kukabi:** I don't know about the existing models of validator ranking, but I saw a few community contributions around this. Would help the `/validators` command to specify the ranking algorithm.
+
+> **@osoiotoko:** Yes, Good point, lets rename previous `/validators` to `/nominations` 
+> and make a very useful feature - info about validators here in `/validators`.
+> Here I need to comment:
+> When user is changing his validators list, he wants to know: 
+> 1. what validators will be in next set (some users jump from val to val according to this)
+> 2. what are the chances for this validator to get active (total validator stake / lowest stake in active set
+> 3. will his stake get rewards (if validator is oversubbed, nominator stake must be in first 64nom_stake(by amount) to get rewards.
+> 4. some recommendations (if these recommendations are from the clear algorythm - it would be great, there is some implementation in polkadot.js)
+> 5. may be some summary info about validators (ID/name , %, total stake)
