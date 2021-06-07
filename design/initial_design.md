@@ -99,8 +99,9 @@ On chat startup: `enter your HDX address (get it and save)`
 - A validator gets offline (doesn't send the `imonline` message).
 - A validator gets slashed.
 - ...
+> **@osoiotoko:** - (!)validator changes his fee% (there are some validators who manipulate: suggest 0% and then change fee to 99% after getting to active stake)
 
-> **@osoiotoko:** - ... big news
+> **@osoiotoko:** - {big news}
 
 > notifications is the coolest thing in this bot. Are we going to allow custom on/off? Seems like next version?
 
@@ -137,5 +138,5 @@ On chat startup: `enter your HDX address (get it and save)`
 > - 1 or 2 promoted validators (marked) 
 > If we can create such a list, we must make a disclaimer, that we don't check validator responsibility or behavior. Just math and chain info.
 
-> `/validator_summary` - total nominated stake, 64th nominated stake (for oversubscribed), {*own stake* is meaningless}, fee %
+> => `/validator_summary` - total nominated stake, 64th nominated stake (for oversubscribed), {*own stake* is meaningless}, fee %
 > 
