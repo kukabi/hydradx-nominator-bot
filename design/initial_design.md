@@ -13,13 +13,15 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > **@kukabi:** I agree this is not a critical feature now. But it'd be good to be prepared for future i18n.
 
-> **@osoiotoko:**✅
+> **@osoiotoko:** ✅
 
 `/about` information about bot, devs, list of good validators
 
 > **@kukabi:** I think we can separate the bot's `/about` from the network info. How about a `/network` command to get that sort of info? Or just have a `/validators` command to display select validators, and rename the same-named command below as I suggested in the comments for it?
 
 > **@osoiotoko:** "list of good validators" - is some advertizing here. Didn't mean to make big things here. 
+
+> **@kukabi:** I see, ok.
 
 `/help` list of commands
 
@@ -92,18 +94,31 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > **@kukabi:** Just adding some notifications off the top of my head, let's elaborate.
 
-- One of the nominated validators receives/loses a nomination. > **@osoiotoko:** I am not sure this info is valuable
-- A nominated validator gets in the active set. 
+- One of the nominated validators receives/loses a nomination.
+  > **@osoiotoko:** I am not sure this info is valuable
+  
+  > **@kukabi:** I agree it's a bit too fine-grained. 
+- ~~A nominated validator~~ One or more nominated validators get in the active set. 
 - A payout is made to one of the nominator accounts.
-- Pending payouts for any nominators at the end of every era. > **@osoiotoko:** any nominators = this user nominators ?
+- Pending payouts for any nominators at the end of every era.
+  > **@osoiotoko:** any nominators = this user nominators ?
+
+  > **@kukabi:** yeah I meant just this user's registered nominators.
 - A validator gets offline (doesn't send the `imonline` message).
 - A validator gets slashed.
 - ...
 > **@osoiotoko:** - (!)validator changes his fee% (there are some validators who manipulate: suggest 0% and then change fee to 99% after getting to active stake)
 
+> **@kukabi** Yes this is very important, adding just below.
+
+- A validator changes commission.
+
 > **@osoiotoko:** - {big news}
 
 > notifications is the coolest thing in this bot. Are we going to allow custom on/off? Seems like next version?
+
+
+> **@kukabi** The 1KV bot has it already, so I don't think it would be too much work to implement it. Let's consider when we move on to the planning phase.
 
 ### Validator Ranking
 
@@ -118,6 +133,8 @@ On chat startup: `enter your HDX address (get it and save)`
 > 3. will his stake get rewards (if validator is oversubbed, nominator stake must be in first 64nom_stake(by amount) to get rewards.
 > 4. some recommendations (if these recommendations are from the clear algorythm - it would be great, there is some implementation in polkadot.js)
 > 5. may be some summary info about validators (ID/name , %, total stake)
+
+> **@kukabi** Cool I like these. I'll check out the polkadot.js algorithm. Also, we don't have to get this 100% right in the first release imho, we could improve it over time.
 
 > **@osoiotoko:**
 > `/validators` =>
@@ -140,3 +157,9 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > => `/validator_summary` - total nominated stake, 64th nominated stake (for oversubscribed), {*own stake* is meaningless}, fee %
 > 
+
+> **@kukabi** I like the algorithm sketch. Not sure if you meant to have 3 commands, or 3 sections of information though. I think we can find a way to summarize all this information in a single command and reply message. It's tricky to accomplish it with Telegram UI restrictions, but we can find a way. Maybe multi-level messages?
+
+### Income Report
+
+> **@kukabi** I think at the end of the day all that matters is how much a nominator makes on their stake and efforts. So we need to have some sort of income report, be it in APY terms or reward reports, or both and more. I agree with your above comment that we don't need the `/rewards` command right away in the first version, but let's start thinking about it.
