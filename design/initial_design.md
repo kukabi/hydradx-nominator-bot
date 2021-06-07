@@ -120,6 +120,7 @@ On chat startup: `enter your HDX address (get it and save)`
 
 > **@osoiotoko:**
 > `/validators` =>
+
 > => `/pending_validators`
 
 > => `/suggested_validators` 
