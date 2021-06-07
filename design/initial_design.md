@@ -47,7 +47,7 @@ On chat startup: `enter your HDX address (get it and save)`
     
 > **@kukabi:** ✅
 
-`/validators` -> choose your nominator ->
+`/nominations` > **@osoiotoko:** ~~`/validators`~~ -> choose your nominator ->
 	
     nominated validator list (here is a UI issue: list could be big)
     
@@ -113,7 +113,26 @@ On chat startup: `enter your HDX address (get it and save)`
 > Here I need to comment:
 > When user is changing his validators list, he wants to know: 
 > 1. what validators will be in next set (some users jump from val to val according to this)
-> 2. what are the chances for this validator to get active (total validator stake / lowest stake in active set
+> 2. what are the chances for this validator to get active (total validator stake / lowest stake in active set)
 > 3. will his stake get rewards (if validator is oversubbed, nominator stake must be in first 64nom_stake(by amount) to get rewards.
 > 4. some recommendations (if these recommendations are from the clear algorythm - it would be great, there is some implementation in polkadot.js)
 > 5. may be some summary info about validators (ID/name , %, total stake)
+
+> **@osoiotoko:**
+> `/validators` =>
+> => `/pending_validators`
+> => `/suggested_validators` 
+> I suggest an algorithm sketch, I am trying to operate with very simple instances.
+> Get the list of all validators
+> Get the user_stake
+> Exclude vals with 10+% commision 
+> Exclude Oversubscribed Vals where user_stake has rank>64 (by amount)
+> Compose the recomendation list: (if somehow we can get staking APY - it would be perfect to refer to it)
+> - Pending (will be active in next set)
+> - Several Oversubscribed 
+> - biggest part of the list is low-stakers which are IN 150vals, they give the best APY
+> - one or two almost in 150
+> - 1 or 2 promoted validators (marked) 
+> If we can create such a list, we must make a disclaimer, that we don't check validator responsibility or behavior. Just math and chain info.
+> `/validator_summary` - total nominated stake, 64th nominated stake (for oversubscribed), {*own stake* is meaningless}, fee %
+> 
