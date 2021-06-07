@@ -121,6 +121,7 @@ On chat startup: `enter your HDX address (get it and save)`
 > **@osoiotoko:**
 > `/validators` =>
 > => `/pending_validators`
+
 > => `/suggested_validators` 
 > I suggest an algorithm sketch, I am trying to operate with very simple instances.
 > Get the list of all validators
@@ -134,5 +135,6 @@ On chat startup: `enter your HDX address (get it and save)`
 > - one or two almost in 150
 > - 1 or 2 promoted validators (marked) 
 > If we can create such a list, we must make a disclaimer, that we don't check validator responsibility or behavior. Just math and chain info.
+
 > `/validator_summary` - total nominated stake, 64th nominated stake (for oversubscribed), {*own stake* is meaningless}, fee %
 > 
